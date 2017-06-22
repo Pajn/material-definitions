@@ -1,0 +1,28 @@
+{
+  "name": "material-definitions",
+  "version": "0.1.0",
+  "description": "Material Design definitions with TypeScript types",
+  "main": "./lib/index.js",
+  "typings": "./lib/index.d.ts",
+  "repository": "Pajn/material-definitions",
+  "author": "Rasmus Eneman <rasmus@eneman.eu>",
+  "license": "MIT",
+  "dependencies": {
+    "@types/jest": "20.0.1",
+    "@types/webpack": "2.2.16",
+    "glamorous": "^3.23.3"
+  },
+  "devDependencies": {
+    "prettier": "^1.4.4",
+    "tscomp": "dev"
+  },
+  "tscomp": {
+    "mode": "lib"
+  },
+  "scripts": {
+    "build": "tscomp build",
+    "test": "tscomp test",
+    "eject": "tscomp eject",
+    "watch": "tscomp watch"
+  }
+}
