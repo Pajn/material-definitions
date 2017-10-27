@@ -1,12 +1,12 @@
 export const fontFamily = 'Roboto, sans-serif'
 
 export const fontWeight = {
-  thin: 100,
-  light: 300,
-  regular: 400,
-  medium: 500,
-  bold: 700,
-  black: 900,
+  thin: 100 as 100,
+  light: 300 as 300,
+  regular: 400 as 400,
+  medium: 500 as 500,
+  bold: 700 as 700,
+  black: 900 as 900,
 }
 
 export const display4 = {

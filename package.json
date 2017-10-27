@@ -9,8 +9,7 @@
   "license": "MIT",
   "dependencies": {
     "@types/jest": "20.0.1",
-    "@types/webpack": "2.2.16",
-    "glamorous": "^3.23.3"
+    "@types/webpack": "2.2.16"
   },
   "devDependencies": {
     "prettier": "^1.4.4",

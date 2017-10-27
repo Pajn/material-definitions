@@ -1,5 +1,3 @@
-import {CSSProperties} from 'glamorous'
-
 export const animationCurve = {
   /**
    * The standard curve (also referred to as “ease in out”) is the most common
@@ -7,7 +5,7 @@ export const animationCurve = {
    * on-screen locations.
    * It applies to growing and shrinking material, among other property changes.
    */
-  standard: 'cubic-bezier(0.4, 0.0, 0.2, 1)',
+  standard: 'cubic-bezier(0.4, 0.0, 0.2, 1)' as 'cubic-bezier(0.4, 0.0, 0.2, 1)',
 
   /**
    * Using the deceleration curve (also referred to as “ease out”) elements
@@ -17,7 +15,7 @@ export const animationCurve = {
    * opacity (to 100%). In some cases, when elements enter the screen at 0% opacity,
    * they may slightly shrink from a larger size upon entry.
    */
-  deceleration: 'cubic-bezier(0.0, 0.0, 0.2, 1)',
+  deceleration: 'cubic-bezier(0.0, 0.0, 0.2, 1)' as 'cubic-bezier(0.0, 0.0, 0.2, 1)',
 
   /**
    * Using the acceleration curve (also referred to as “ease in”) elements
@@ -27,7 +25,7 @@ export const animationCurve = {
    * in either size (to 0%) or opacity (to 0%). In some cases, when elements
    * leave the screen at 0% opacity, they may also slightly scale up or down in size.
    */
-  acceleration: 'cubic-bezier(0.4, 0.0, 1, 1)',
+  acceleration: 'cubic-bezier(0.4, 0.0, 1, 1)' as 'cubic-bezier(0.4, 0.0, 1, 1)',
 
   /**
    * Using the sharp curve (also referred to as “ease in out”) elements quickly
@@ -40,7 +38,7 @@ export const animationCurve = {
    * doesn't follow an exact path to the off-screen point.
    * Elements may return from that point at any time.
    */
-  sharp: 'cubic-bezier(0.4, 0.0, 0.6, 1)',
+  sharp: 'cubic-bezier(0.4, 0.0, 0.6, 1)' as 'cubic-bezier(0.4, 0.0, 0.6, 1)',
 }
 
 /**
@@ -50,16 +48,16 @@ export const animationDuration = {
   /**
    * The default duration value for elevation transitions.
    */
-  elevation: 280,
+  elevation: 280 as 280,
 
-  large: 375,
-  enter: 225,
-  leave: 195,
+  large: 375 as 375,
+  enter: 225 as 225,
+  leave: 195 as 195,
 
   mobile: {
-    large: 375,
-    enter: 225,
-    leave: 195,
+    large: 375 as 375,
+    enter: 225 as 225,
+    leave: 195 as 195,
   },
   tablet: {
     large: 375 * 1.3,
@@ -100,10 +98,10 @@ export const elevationTransition = ({
   duration?: number
   easing?: string
   willChange?: boolean
-}): CSSProperties =>
+}) =>
   Object.assign(
     {
       transition: `box-shadow ${duration} ${easing}`,
     },
-    willChange ? {willChange: 'box-shadow'} : undefined,
+    willChange ? {willChange: 'box-shadow' as 'box-shadow'} : undefined,
   )
