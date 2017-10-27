@@ -105,3 +105,49 @@ export const elevationTransition = ({
     },
     willChange ? {willChange: 'box-shadow' as 'box-shadow'} : undefined,
   )
+
+export const fadeTransition = (
+  visible: boolean,
+  {scale, scaleRatio = 0.7} = {scale: false},
+) => ({
+  opacity: visible ? 1 : 0,
+  ...scale ? {transform: `scale(${visible ? 1 : scaleRatio})`} : undefined,
+
+  transition: `opacity ${visible
+    ? animationDuration.mobile.enter
+    : animationDuration.mobile.leave} ${visible
+    ? animationCurve.deceleration
+    : animationCurve.acceleration}, ${scale
+    ? `transform ${visible
+        ? animationDuration.mobile.enter
+        : animationDuration.mobile.leave} ${visible
+        ? animationCurve.deceleration
+        : animationCurve.acceleration}`
+    : ''}`,
+  '@media (min-width: 601px)': {
+    transition: `opacity ${visible
+      ? animationDuration.desktop.enter
+      : animationDuration.desktop.leave} ${visible
+      ? animationCurve.deceleration
+      : animationCurve.acceleration}, ${scale
+      ? `transform ${visible
+          ? animationDuration.desktop.enter
+          : animationDuration.desktop.leave} ${visible
+          ? animationCurve.deceleration
+          : animationCurve.acceleration}`
+      : ''}`,
+  },
+  '@media (pointer: coarse) and (min-width: 601px)': {
+    transition: `opacity ${visible
+      ? animationDuration.tablet.enter
+      : animationDuration.tablet.leave} ${visible
+      ? animationCurve.deceleration
+      : animationCurve.acceleration}, ${scale
+      ? `transform ${visible
+          ? animationDuration.tablet.enter
+          : animationDuration.tablet.leave} ${visible
+          ? animationCurve.deceleration
+          : animationCurve.acceleration}`
+      : ''}`,
+  },
+})
