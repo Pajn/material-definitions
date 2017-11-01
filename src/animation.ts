@@ -60,14 +60,20 @@ export const animationDuration = {
     leave: 195 as 195,
   },
   tablet: {
-    large: 375 * 1.3,
-    enter: 225 * 1.3,
-    leave: 195 * 1.3,
+    /** 375 * 1.3 */
+    large: 487.5 as 487.5,
+    /** 225 * 1.3 */
+    enter: 292.5 as 292.5,
+    /** 195 * 1.3 */
+    leave: 253.5 as 253.5,
   },
   desktop: {
-    large: 375 * 0.7,
-    enter: 225 * 0.7,
-    leave: 195 * 0.7,
+    /** 375 * 0.7 */
+    large: 262.5 as 262.5,
+    /** 225 * 0.7 */
+    enter: 157.5 as 157.5,
+    /** 195 * 0.7 */
+    leave: 136.5 as 136.5,
   },
 }
 
